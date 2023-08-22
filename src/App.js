@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+export default function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <InputForm />
+      <TaskList />
+      <TaskListFooter />
     </div>
   );
 }
 
-export default App;
+const Header = () => {
+  return (
+    <div>
+      <header>Productivity Application</header>
+    </div>
+  );
+}
+
+const InputForm = () => {
+  return (
+    <div className="form">
+      <h2>Input Form</h2>
+    </div>
+  );
+}
+
+const TaskList = () => {
+  return (
+    <div className="task-list">
+      TASK LIST
+    </div>
+  );
+}
+
+const TaskListFooter = () => {
+  return (
+    <footer className="statistics">
+      <em>You have accomplished x task on your task list.</em>
+    </footer>
+  )
+}
